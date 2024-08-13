@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-image: url('https://images.mengo.com.br/matchday/prod/assets/img/HomeEstadio2024/bg-pattern.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+main {
+    margin-top: 70px;
+}
+
+.menu-main nav ul{
+    display: flex;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+  
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    padding: 10px 30px;
+    text-align: center;
+    border: 1.5px solid #525252;
+    white-space: nowrap;
+    cursor: pointer;
+    background-color: #252525;
+    color: #fff;
+    font-size: 16px;
+}
+.section {
+    display: none;
+}
+
+li:first-child button {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+li:last-child button {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+button:focus {
+    background-color: #c3281e;
+    border-color: #f00a0a;
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    gap: 20px;
+    padding: 50px 50px;
+    background-color: #fff;
+    width: 92%;
+    border-radius: 10px;
+}
+
+.lista li {
+    list-style-type: disc;
+    margin-left: 50px;
+    position: relative; /* Permite o posicionamento do pseudo-elemento */
+}
+
+.lista li::before {
+    content: ""; /* Necessário para que o pseudo-elemento seja exibido */
+    position: absolute;
+    left: -30px; /* Ajuste a posição para que a borda fique antes do marcador */
+    top: 0;
+    height: 100%;
+    width: 5px; /* Largura da borda */
+    background-color: #c3281e; /* Cor da borda */
+}
+
+.lista li::before :first-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 7px;
+}
+
+.imagens img {
+    width: 100%;
+    height: auto;
+}
+
+/* @media screen and (max-width: 1024px) {
+    section {
+        padding: 50px 100px; 
+    }
+} */
+
+@media screen and (max-width: 768px) {
+    .titulo {
+        display: none;
+    }
+
+    .menu-main {
+        display: none;
+    }
+    section {
+        padding: 30px 20px;
+    }
+
+    .imagens img {
+        width: 100%;
+        height: auto;
+    }
+
+}
